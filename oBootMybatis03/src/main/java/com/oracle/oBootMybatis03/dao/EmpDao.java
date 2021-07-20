@@ -14,4 +14,8 @@ public interface EmpDao {
 	int           insert(Emp emp);
 	int           delete(int empno);
 	List<EmpDept> listEmpDept();
+	// Ajax
+	String	      deptName(int deptNo);
+	List<EmpDept> listEmp(EmpDept empDept);
+
 }

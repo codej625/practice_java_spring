@@ -11,7 +11,7 @@ import com.oracle.oBootMybatis03.model.Member1;
 @Repository
 public class Member1DaoImpl implements Member1Dao {
 	@Autowired
-	private SqlSession session;
+	private SqlSession	session;
 	
 	@Override
 	public int memCount(String id) {

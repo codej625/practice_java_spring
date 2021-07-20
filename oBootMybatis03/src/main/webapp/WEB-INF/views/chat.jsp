@@ -52,7 +52,7 @@
 
 	function wsOpen(){
 		console.log("wsOpen  location.host: " + location.host);
-        var wsUri  = "ws://" + location.host + "/obootMyBatis03/chating";
+        var wsUri  = "ws://" + location.host + "/bootMyBatis03/chating";
  		ws = new WebSocket(wsUri);
 		wsEvt();
 	}
@@ -74,6 +74,12 @@
 				var jsonMsg = JSON.parse(msg);
 				// 파싱한 객체의 type값을 확인하여 getId값이면 초기 설정된 값이므로 채팅창에 값을 입력하는게 아니라
 				// 추가한 태그 sessionId에 값을 세팅
+				
+			    // type: "message",
+			    // sessionId : $("#sessionId").val(),
+			    // userName : $("#userName").val(),
+			    // msg : $("#chatting").val()
+
 				if(jsonMsg.type == "getId"){
 					var sid = jsonMsg.sessionId != null ? jsonMsg.sessionId : "";
 					if(sid != ''){

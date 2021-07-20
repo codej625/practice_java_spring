@@ -23,5 +23,8 @@ public interface EmpService {
 	 void          selListDept(Map<String,Object> map); 
 	 int           memCount(String id); 
 	 List<Member1> listMem(Member1 member1);
-
+	 // Ajax
+	 String        deptName(int deptno);
+	 List<EmpDept> listEmp(EmpDept empDept);
+	 
 }
